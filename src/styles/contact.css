@@ -380,6 +380,6 @@ a.contact-card__value:hover {
   .contact-card__value {
     font-size: 15px;
     white-space: normal;
-    word-break: break-all;
+    overflow-wrap: anywhere;
   }
 }
