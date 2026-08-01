@@ -140,15 +140,6 @@
   );
 }
 
-.contact-card--email {
-  border-color: rgba(129, 140, 248, 0.22);
-  background: linear-gradient(
-    145deg,
-    rgba(129, 140, 248, 0.1),
-    rgba(255, 255, 255, 0.02)
-  );
-}
-
 .contact-card__top {
   grid-column: 1 / -1;
 

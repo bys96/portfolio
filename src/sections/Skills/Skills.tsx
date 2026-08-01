@@ -1,120 +1,70 @@
+import type { ReactNode } from "react";
 import {
+  FaAws,
   FaCss3Alt,
+  FaDocker,
   FaFigma,
-  FaGitAlt,
   FaGithub,
   FaHtml5,
   FaJava,
   FaJs,
+  FaNodeJs,
   FaReact,
 } from "react-icons/fa";
-
 import {
-  SiAxios,
+  SiExpress,
   SiMysql,
+  SiNeon,
+  SiNotion,
+  SiPostgresql,
+  SiPostman,
+  SiRender,
+  SiSequelize,
   SiSpringboot,
+  SiTailwindcss,
   SiTypescript,
+  SiVercel,
   SiVite,
 } from "react-icons/si";
 
+import { skillCategories, type SkillIconKey } from "../../data/skills";
 import "../../styles/skills.css";
 
-type Skill = {
-  name: string;
-  icon: React.ReactNode;
+const skillIcons: Record<SkillIconKey, ReactNode> = {
+  html: <FaHtml5 aria-hidden="true" />,
+  css: <FaCss3Alt aria-hidden="true" />,
+  javascript: <FaJs aria-hidden="true" />,
+  typescript: <SiTypescript aria-hidden="true" />,
+  react: <FaReact aria-hidden="true" />,
+  tailwind: <SiTailwindcss aria-hidden="true" />,
+  vite: <SiVite aria-hidden="true" />,
+  java: <FaJava aria-hidden="true" />,
+  spring: <SiSpringboot aria-hidden="true" />,
+  node: <FaNodeJs aria-hidden="true" />,
+  express: <SiExpress aria-hidden="true" />,
+  sequelize: <SiSequelize aria-hidden="true" />,
+  mysql: <SiMysql aria-hidden="true" />,
+  postgresql: <SiPostgresql aria-hidden="true" />,
+  neon: <SiNeon aria-hidden="true" />,
+  aws: <FaAws aria-hidden="true" />,
+  docker: <FaDocker aria-hidden="true" />,
+  render: <SiRender aria-hidden="true" />,
+  vercel: <SiVercel aria-hidden="true" />,
+  postman: <SiPostman aria-hidden="true" />,
+  git: <FaGithub aria-hidden="true" />,
+  github: <FaGithub aria-hidden="true" />,
+  figma: <FaFigma aria-hidden="true" />,
+  notion: <SiNotion aria-hidden="true" />,
 };
-
-type SkillCategory = {
-  title: string;
-  description: string;
-  skills: Skill[];
-};
-
-const skillCategories: SkillCategory[] = [
-  {
-    title: "Frontend",
-    description:
-      "사용자 경험과 유지보수를 고려한 반응형 웹 인터페이스를 구현합니다.",
-    skills: [
-      {
-        name: "HTML5",
-        icon: <FaHtml5 aria-hidden="true" />,
-      },
-      {
-        name: "CSS3",
-        icon: <FaCss3Alt aria-hidden="true" />,
-      },
-      {
-        name: "JavaScript",
-        icon: <FaJs aria-hidden="true" />,
-      },
-      {
-        name: "TypeScript",
-        icon: <SiTypescript aria-hidden="true" />,
-      },
-      {
-        name: "React",
-        icon: <FaReact aria-hidden="true" />,
-      },
-      {
-        name: "Vite",
-        icon: <SiVite aria-hidden="true" />,
-      },
-    ],
-  },
-  {
-    title: "Backend",
-    description:
-      "서버와 데이터베이스 구조를 이해하고 REST API 기반 기능을 구현합니다.",
-    skills: [
-      {
-        name: "Java",
-        icon: <FaJava aria-hidden="true" />,
-      },
-      {
-        name: "Spring Boot",
-        icon: <SiSpringboot aria-hidden="true" />,
-      },
-      {
-        name: "MySQL",
-        icon: <SiMysql aria-hidden="true" />,
-      },
-      {
-        name: "Axios",
-        icon: <SiAxios aria-hidden="true" />,
-      },
-    ],
-  },
-  {
-    title: "Tools",
-    description: "협업과 개발 생산성을 높이기 위한 도구를 활용합니다.",
-    skills: [
-      {
-        name: "Git",
-        icon: <FaGitAlt aria-hidden="true" />,
-      },
-      {
-        name: "GitHub",
-        icon: <FaGithub aria-hidden="true" />,
-      },
-      {
-        name: "Figma",
-        icon: <FaFigma aria-hidden="true" />,
-      },
-    ],
-  },
-];
 
 function Skills() {
   return (
     <section className="skills" id="skills">
       <div className="skills__header">
         <p className="skills__subtitle">SKILLS</p>
-
         <h2 className="skills__title">사용할 수 있는 기술입니다.</h2>
-
         <p className="skills__description">
-          프로젝트를 진행하며 사용한 기술과 개발 도구를 정리했습니다.
+          프로젝트에서 직접 사용한 기술과 개발 도구를 정리했습니다.
         </p>
       </div>
 
@@ -128,7 +78,6 @@ function Skills() {
 
               <div>
                 <h3 className="skill-card__title">{category.title}</h3>
-
                 <p className="skill-card__description">
                   {category.description}
                 </p>
@@ -138,9 +87,16 @@ function Skills() {
             <ul className="skill-card__list">
               {category.skills.map((skill) => (
                 <li className="skill-card__item" key={skill.name}>
-                  <span className="skill-card__icon">{skill.icon}</span>
+                  <span className="skill-card__icon">
+                    {skillIcons[skill.icon]}
+                  </span>
 
-                  <span className="skill-card__name">{skill.name}</span>
+                  <span className="skill-card__content">
+                    <strong className="skill-card__name">{skill.name}</strong>
+                    <span className="skill-card__detail">
+                      {skill.description}
+                    </span>
+                  </span>
                 </li>
               ))}
             </ul>

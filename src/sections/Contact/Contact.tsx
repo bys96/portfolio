@@ -1,17 +1,15 @@
 import { ArrowUpRight, Copy, Mail, MapPin } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
 import { useState } from "react";
+import { profile } from "../../data/profile";
 import "../../styles/contact.css";
-
-const EMAIL = "jkpp0611@naver.com";
-const GITHUB_URL = "https://github.com/bys96";
 
 function Contact() {
   const [isCopied, setIsCopied] = useState(false);
 
   const handleCopyEmail = async () => {
     try {
-      await navigator.clipboard.writeText(EMAIL);
+      await navigator.clipboard.writeText(profile.email);
       setIsCopied(true);
 
       window.setTimeout(() => {
@@ -43,7 +41,7 @@ function Contact() {
           <div className="contact__actions">
             <a
               className="contact__button contact__button--primary"
-              href={`mailto:${EMAIL}`}
+              href={`mailto:${profile.email}`}
             >
               <Mail size={19} aria-hidden="true" />
               이메일 보내기
@@ -52,7 +50,7 @@ function Contact() {
 
             <a
               className="contact__button"
-              href={GITHUB_URL}
+              href={profile.githubUrl}
               target="_blank"
               rel="noreferrer"
             >
@@ -64,7 +62,7 @@ function Contact() {
         </div>
 
         <div className="contact__information">
-          <article className="contact-card contact-card--email">
+          <article className="contact-card">
             <div className="contact-card__top">
               <span className="contact-card__icon">
                 <Mail size={22} aria-hidden="true" />
@@ -76,8 +74,11 @@ function Contact() {
             <div className="contact-card__body">
               <p className="contact-card__title">이메일</p>
 
-              <a className="contact-card__value" href={`mailto:${EMAIL}`}>
-                {EMAIL}
+              <a
+                className="contact-card__value"
+                href={`mailto:${profile.email}`}
+              >
+                {profile.email}
               </a>
             </div>
 
@@ -106,17 +107,17 @@ function Contact() {
 
               <a
                 className="contact-card__value"
-                href={GITHUB_URL}
+                href={profile.githubUrl}
                 target="_blank"
                 rel="noreferrer"
               >
-                {GITHUB_URL}
+                {profile.githubLabel}
               </a>
             </div>
 
             <a
               className="contact-card__external"
-              href={GITHUB_URL}
+              href={profile.githubUrl}
               target="_blank"
               rel="noreferrer"
               aria-label="GitHub 새 창에서 열기"
@@ -136,13 +137,12 @@ function Contact() {
 
             <div className="contact-card__body">
               <p className="contact-card__title">활동 지역</p>
-
-              <p className="contact-card__value">대한민국 서울</p>
+              <p className="contact-card__value">{profile.location}</p>
             </div>
 
             <span className="contact-card__status">
               <span className="contact-card__status-dot" aria-hidden="true" />
-              Available
+              구직 중
             </span>
           </article>
         </div>

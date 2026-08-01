@@ -1,34 +1,6 @@
 import { BriefcaseBusiness, CalendarDays } from "lucide-react";
 import "../../styles/experience.css";
-
-const experiences = [
-  {
-    period: "2024.01 — Present",
-    company: "회사명",
-    role: "Frontend Developer",
-    description:
-      "React와 TypeScript를 기반으로 웹 서비스의 UI 개발과 유지보수를 담당했습니다.",
-    tasks: [
-      "재사용 가능한 공통 컴포넌트 설계",
-      "REST API 연동 및 데이터 상태 관리",
-      "반응형 UI 구현과 사용자 경험 개선",
-    ],
-    skills: ["React", "TypeScript", "JavaScript", "CSS"],
-  },
-  {
-    period: "2023.03 — 2023.12",
-    company: "프로젝트 또는 교육기관",
-    role: "Web Developer",
-    description:
-      "팀 프로젝트를 진행하며 프론트엔드와 백엔드 개발 전반을 경험했습니다.",
-    tasks: [
-      "프로젝트 화면 설계 및 기능 구현",
-      "Spring Boot 기반 서버 API 연동",
-      "Git을 활용한 팀 협업과 코드 관리",
-    ],
-    skills: ["React", "Spring Boot", "MySQL", "Git"],
-  },
-];
+import { experiences } from "../../data/experiences";
 
 function Experience() {
   return (
@@ -48,7 +20,7 @@ function Experience() {
             key={`${experience.company}-${experience.period}`}
           >
             <div className="experience__marker">
-              <BriefcaseBusiness size={20} />
+              <BriefcaseBusiness size={20} aria-hidden="true" />
             </div>
 
             <div className="experience__card">
@@ -60,7 +32,7 @@ function Experience() {
                 </div>
 
                 <div className="experience__period">
-                  <CalendarDays size={16} />
+                  <CalendarDays size={16} aria-hidden="true" />
                   <span>{experience.period}</span>
                 </div>
               </div>

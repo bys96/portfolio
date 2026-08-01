@@ -59,10 +59,18 @@
 }
 
 .hero__description {
+  display: grid;
+  gap: 4px;
   margin-top: 32px;
   color: #aeb4c0;
   font-size: clamp(17px, 2vw, 21px);
   line-height: 1.8;
+}
+
+.hero__description p:first-child {
+  margin-bottom: 4px;
+  color: #d9dce3;
+  font-weight: 700;
 }
 
 .hero__buttons {

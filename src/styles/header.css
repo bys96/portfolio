@@ -4,30 +4,40 @@
   left: 0;
   z-index: 1000;
   width: 100%;
+
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+
   background: rgba(11, 13, 18, 0.8);
+
   backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
 }
 
 .header__container {
+  display: flex;
   width: min(calc(100% - 48px), 1180px);
   height: 72px;
-  margin: 0 auto;
-
-  display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
 }
 
 .header__logo {
-  color: #fff;
+  color: #ffffff;
   font-size: 22px;
   font-weight: 800;
   letter-spacing: -0.04em;
+  text-decoration: none;
 }
 
 .header__logo span {
   color: #818cf8;
+}
+
+.header__logo:focus-visible {
+  border-radius: 4px;
+  outline: 2px solid #a5b4fc;
+  outline-offset: 5px;
 }
 
 .header__nav {
@@ -38,60 +48,121 @@
 
 .header__nav a {
   position: relative;
+
+  padding: 8px 0;
+
   color: #b7bcc8;
   font-size: 15px;
   font-weight: 500;
-  transition: 0.25s;
+  text-decoration: none;
+
+  transition: color 0.25s ease;
 }
 
 .header__nav a:hover {
-  color: #fff;
+  color: #ffffff;
 }
 
 .header__nav a::after {
   content: "";
+
   position: absolute;
+  right: 0;
+  bottom: 0;
   left: 0;
-  bottom: -6px;
-  width: 0;
+
   height: 2px;
+
+  border-radius: 999px;
+
   background: #818cf8;
-  transition: width 0.25s;
+
+  transform: scaleX(0);
+  transform-origin: center;
+
+  transition: transform 0.25s ease;
 }
 
-.header__nav a:hover::after {
-  width: 100%;
+/* 현재 스크롤 위치의 메뉴 */
+
+.header__nav a.header__nav-link--active {
+  color: #ffffff;
+}
+
+.header__nav a.header__nav-link--active::after {
+  transform: scaleX(1);
+}
+
+.header__nav a:focus-visible {
+  border-radius: 4px;
+  outline: 2px solid #a5b4fc;
+  outline-offset: 5px;
 }
 
 .header__menu {
   display: none;
-  border: none;
+  align-items: center;
+  justify-content: center;
+
+  width: 42px;
+  height: 42px;
+  padding: 0;
+
+  border: 0;
+  border-radius: 10px;
+
   background: transparent;
-  color: #fff;
+
+  color: #ffffff;
+
   cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
 }
 
-/* Mobile */
+.header__menu:hover {
+  background: rgba(129, 140, 248, 0.1);
+  color: #c7d2fe;
+}
+
+.header__menu:focus-visible {
+  outline: 2px solid #a5b4fc;
+  outline-offset: 3px;
+}
+
+/* 태블릿 및 모바일 */
 
 @media (max-width: 768px) {
+  .header__container {
+    width: min(calc(100% - 32px), 1180px);
+  }
+
   .header__menu {
     display: flex;
-    align-items: center;
-    justify-content: center;
   }
 
   .header__nav {
     position: absolute;
     top: 72px;
     left: 0;
-    width: 100%;
 
     display: none;
+    width: 100%;
     flex-direction: column;
+    align-items: stretch;
     gap: 0;
 
-    background: #11151d;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+
+    background: rgba(17, 21, 29, 0.98);
+
+    box-shadow: 0 18px 30px rgba(0, 0, 0, 0.24);
+
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
   }
 
   .header__nav.active {
@@ -100,10 +171,77 @@
 
   .header__nav a {
     width: 100%;
-    padding: 18px 24px;
+    padding: 17px 24px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.045);
+
+    color: #b7bcc8;
+  }
+
+  .header__nav a:last-child {
+    border-bottom: 0;
+  }
+
+  .header__nav a:hover {
+    background: rgba(129, 140, 248, 0.07);
   }
 
   .header__nav a::after {
     display: none;
+  }
+
+  /*
+   * 모바일에서는 밑줄보다
+   * 왼쪽 선과 배경으로 현재 메뉴를 표시한다.
+   */
+  .header__nav a.header__nav-link--active {
+    padding-left: 29px;
+
+    border-left: 3px solid #818cf8;
+
+    background: rgba(129, 140, 248, 0.1);
+
+    color: #ffffff;
+  }
+
+  .header__nav a:focus-visible {
+    border-radius: 0;
+    outline-offset: -3px;
+  }
+}
+
+/* 작은 모바일 */
+
+@media (max-width: 480px) {
+  .header__container {
+    width: min(calc(100% - 24px), 1180px);
+    height: 64px;
+  }
+
+  .header__logo {
+    font-size: 21px;
+  }
+
+  .header__nav {
+    top: 64px;
+  }
+
+  .header__nav a {
+    padding: 16px 20px;
+    font-size: 14px;
+  }
+
+  .header__nav a.header__nav-link--active {
+    padding-left: 25px;
+  }
+}
+
+/* 움직임 최소화 설정 */
+
+@media (prefers-reduced-motion: reduce) {
+  .header__nav a,
+  .header__nav a::after,
+  .header__menu {
+    transition: none;
   }
 }

@@ -9,6 +9,8 @@ import Skills from "./sections/Skills/Skills";
 import Education from "./sections/Education/Education";
 import Contact from "./sections/Contact/Contact";
 
+import Reveal from "./components/common/Reveal";
+
 function App() {
   return (
     <>
@@ -16,12 +18,30 @@ function App() {
 
       <main>
         <Hero />
-        <About />
-        <Experience />
-        <Projects />
-        <Skills />
-        <Education />
-        <Contact />
+
+        <Reveal>
+          <About />
+        </Reveal>
+
+        <Reveal>
+          <Experience />
+        </Reveal>
+
+        <Reveal>
+          <Projects />
+        </Reveal>
+
+        <Reveal>
+          <Skills />
+        </Reveal>
+
+        <Reveal>
+          <Education />
+        </Reveal>
+
+        <Reveal>
+          <Contact />
+        </Reveal>
       </main>
 
       <Footer />
