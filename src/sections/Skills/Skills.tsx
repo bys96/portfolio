@@ -25,6 +25,8 @@ import {
   SiTypescript,
   SiVercel,
   SiVite,
+  SiNextdotjs,
+  SiSpringsecurity,
 } from "react-icons/si";
 
 import { skillCategories, type SkillIconKey } from "../../data/skills";
@@ -36,10 +38,12 @@ const skillIcons: Record<SkillIconKey, ReactNode> = {
   javascript: <FaJs aria-hidden="true" />,
   typescript: <SiTypescript aria-hidden="true" />,
   react: <FaReact aria-hidden="true" />,
+  next: <SiNextdotjs aria-hidden="true" />,
   tailwind: <SiTailwindcss aria-hidden="true" />,
   vite: <SiVite aria-hidden="true" />,
   java: <FaJava aria-hidden="true" />,
   spring: <SiSpringboot aria-hidden="true" />,
+  security: <SiSpringsecurity aria-hidden="true" />,
   node: <FaNodeJs aria-hidden="true" />,
   express: <SiExpress aria-hidden="true" />,
   sequelize: <SiSequelize aria-hidden="true" />,

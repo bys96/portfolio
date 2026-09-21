@@ -4,10 +4,12 @@ export type SkillIconKey =
   | "javascript"
   | "typescript"
   | "react"
+  | "next"
   | "tailwind"
   | "vite"
   | "java"
   | "spring"
+  | "security"
   | "node"
   | "express"
   | "sequelize"
@@ -62,6 +64,11 @@ export const skillCategories: SkillCategory[] = [
         icon: "react",
       },
       {
+        name: "Next.js",
+        description: "App Router 기반 웹 애플리케이션 개발",
+        icon: "next",
+      },
+      {
         name: "Tailwind CSS",
         description: "빠르고 효율적인 스타일링 적용",
         icon: "tailwind",
@@ -91,6 +98,11 @@ export const skillCategories: SkillCategory[] = [
         name: "Spring Data JPA",
         description: "ORM 기반 데이터 접근 및 CRUD 구현",
         icon: "spring",
+      },
+      {
+        name: "Spring Security",
+        description: "OAuth2·JWT 기반 인증 및 인가 구현",
+        icon: "security",
       },
       {
         name: "WebClient",
@@ -142,6 +154,11 @@ export const skillCategories: SkillCategory[] = [
       {
         name: "AWS",
         description: "배포 및 데이터 관리 경험",
+        icon: "aws",
+      },
+      {
+        name: "Amazon S3",
+        description: "Presigned URL 기반 이미지·미디어 저장",
         icon: "aws",
       },
       {

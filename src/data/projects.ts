@@ -14,6 +14,38 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    title: "Gift Market",
+    category: "Personal Project",
+    description:
+      "주문·결제·배송·클레임·판매자 정산까지 거래의 전체 생명주기를 구현한 멀티셀러 커머스 서비스입니다.",
+    period: "2026.07 — 진행 중",
+    team: "1명",
+    role: "Full Stack",
+    features: [
+      "Order → SellerOrder 구조로 멀티셀러 주문·배송·취소·정산 단위를 분리",
+      "Toss Payments 멱등성·CONFIRMING 상태·재조회로 결제 결과 유실 및 중복 요청 대응",
+      "비관적 잠금과 재고 예약·복원으로 부분 취소·반품·교환의 수량·환불 정합성 처리",
+      "Refresh Token 동시성 제어와 Ledger 기반 판매자 정산·확정 이력 보존",
+    ],
+    skills: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Zustand",
+      "Tailwind CSS",
+      "Java 21",
+      "Spring Boot",
+      "Spring Security",
+      "Spring Data JPA",
+      "MySQL",
+      "Toss Payments",
+      "AWS S3",
+      "Docker",
+    ],
+    github: "https://github.com/bys96/gift-market",
+    demo: "https://gift-market-test.vercel.app/",
+  },
+  {
     title: "Stock Project",
     category: "Personal Project",
     description:
