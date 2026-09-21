@@ -19,27 +19,27 @@ function App() {
       <main>
         <Hero />
 
-        <Reveal>
+        <Reveal className="section-shell section-shell--base">
           <About />
         </Reveal>
 
-        <Reveal>
+        <Reveal className="section-shell section-shell--alt">
           <Experience />
         </Reveal>
 
-        <Reveal>
+        <Reveal className="section-shell section-shell--base">
           <Projects />
         </Reveal>
 
-        <Reveal>
+        <Reveal className="section-shell section-shell--alt">
           <Skills />
         </Reveal>
 
-        <Reveal>
+        <Reveal className="section-shell section-shell--base">
           <Education />
         </Reveal>
 
-        <Reveal>
+        <Reveal className="section-shell section-shell--alt">
           <Contact />
         </Reveal>
       </main>

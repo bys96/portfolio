@@ -25,7 +25,7 @@
 }
 
 .experience__description {
-  color: #9ca3af;
+  color: #b4bbc7;
   font-size: 17px;
   line-height: 1.7;
 }
@@ -72,9 +72,9 @@
 
 .experience__card {
   padding: 32px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.13);
   border-radius: 20px;
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(255, 255, 255, 0.055);
   transition:
     transform 0.25s ease,
     border-color 0.25s ease,
@@ -84,7 +84,7 @@
 .experience__card:hover {
   transform: translateY(-4px);
   border-color: rgba(129, 140, 248, 0.35);
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.075);
 }
 
 .experience__card-header {
@@ -118,7 +118,7 @@
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 999px;
 
-  color: #9ca3af;
+  color: #aeb6c3;
   font-size: 13px;
 }
 
@@ -134,7 +134,7 @@
   gap: 10px;
   margin-bottom: 24px;
   padding-left: 20px;
-  color: #9ca3af;
+  color: #aeb6c3;
 }
 
 .experience__tasks li {

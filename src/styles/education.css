@@ -25,7 +25,7 @@
 }
 
 .education__description {
-  color: #9ca3af;
+  color: #b4bbc7;
   font-size: 17px;
   line-height: 1.7;
 }
@@ -100,13 +100,13 @@
   position: relative;
   padding: 26px;
 
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 20px;
 
   background: linear-gradient(
     145deg,
-    rgba(255, 255, 255, 0.045),
-    rgba(255, 255, 255, 0.015)
+    rgba(255, 255, 255, 0.065),
+    rgba(255, 255, 255, 0.025)
   );
 
   transition:
@@ -182,7 +182,7 @@
 }
 
 .education-card__description {
-  color: #9299a6;
+  color: #aeb6c3;
   font-size: 14px;
   line-height: 1.75;
 }
@@ -201,13 +201,13 @@
 
   padding: 20px;
 
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 18px;
 
   background: linear-gradient(
     145deg,
-    rgba(255, 255, 255, 0.04),
-    rgba(255, 255, 255, 0.012)
+    rgba(255, 255, 255, 0.06),
+    rgba(255, 255, 255, 0.025)
   );
 
   transition:
@@ -266,7 +266,7 @@
 .certificate-card__issuer {
   overflow: hidden;
 
-  color: #8f96a3;
+  color: #a1aab8;
   font-size: 13px;
 
   text-overflow: ellipsis;

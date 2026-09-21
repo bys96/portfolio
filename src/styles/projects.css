@@ -25,7 +25,7 @@
 }
 
 .projects__description {
-  color: #9ca3af;
+  color: #b4bbc7;
   font-size: 17px;
   line-height: 1.7;
 }
@@ -57,7 +57,7 @@
   position: relative;
   overflow: hidden;
   width: 100%;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.13);
   border-radius: 24px;
   background: linear-gradient(
     135deg,
@@ -80,7 +80,7 @@
   width: 100%;
   overflow: hidden;
   aspect-ratio: 16 / 10;
-  background: #0d1118;
+  background: #121821;
   touch-action: pan-y;
 }
 
@@ -98,7 +98,7 @@
   min-width: 100%;
   flex-shrink: 0;
   overflow: hidden;
-  background: #0d1118;
+  background: #121821;
 }
 
 .project-card__image {
@@ -300,9 +300,9 @@
   gap: 10px;
   min-width: 0;
   padding: 14px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.11);
   border-radius: 14px;
-  background: rgba(255, 255, 255, 0.025);
+  background: rgba(255, 255, 255, 0.045);
   color: #818cf8;
 }
 
@@ -330,7 +330,7 @@
 }
 
 .project-card__meta-label {
-  color: #7f8794;
+  color: #9ba4b2;
   font-size: 11px;
   font-weight: 500;
 }
@@ -353,7 +353,7 @@
   flex-direction: column;
   gap: 9px;
   padding-left: 20px;
-  color: #9ca3af;
+  color: #aeb6c3;
 }
 
 .project-card__features li {

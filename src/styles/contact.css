@@ -40,7 +40,7 @@
 .contact__description {
   margin-bottom: 38px;
 
-  color: #9ca3af;
+  color: #b4bbc7;
   font-size: 17px;
   line-height: 1.8;
 }
@@ -114,13 +114,13 @@
 
   padding: 24px;
 
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.13);
   border-radius: 20px;
 
   background: linear-gradient(
     145deg,
-    rgba(255, 255, 255, 0.045),
-    rgba(255, 255, 255, 0.015)
+    rgba(255, 255, 255, 0.07),
+    rgba(255, 255, 255, 0.03)
   );
 
   transition:
@@ -178,7 +178,7 @@
 .contact-card__title {
   margin-bottom: 7px;
 
-  color: #8f96a3;
+  color: #a1aab8;
   font-size: 13px;
   font-weight: 500;
 }

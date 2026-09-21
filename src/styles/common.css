@@ -31,6 +31,36 @@ main > .reveal {
   width: 100%;
 }
 
+
+/* Section tone separation */
+
+.section-shell {
+  position: relative;
+  border-top: 1px solid rgba(255, 255, 255, 0.055);
+}
+
+.section-shell--base {
+  background: #0b0d12;
+}
+
+.section-shell--alt {
+  background: #111620;
+}
+
+.section-shell::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(129, 140, 248, 0.18),
+    transparent
+  );
+  pointer-events: none;
+}
+
 /* 태블릿 */
 
 @media (max-width: 1024px) {

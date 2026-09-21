@@ -27,7 +27,7 @@
 }
 
 .skills__description {
-  color: #9ca3af;
+  color: #b4bbc7;
   font-size: 17px;
   line-height: 1.7;
 }
@@ -44,13 +44,13 @@
 
   padding: 30px;
 
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.13);
   border-radius: 22px;
 
   background: linear-gradient(
     145deg,
-    rgba(255, 255, 255, 0.045),
-    rgba(255, 255, 255, 0.015)
+    rgba(255, 255, 255, 0.07),
+    rgba(255, 255, 255, 0.03)
   );
 
   transition:
@@ -117,7 +117,7 @@
 }
 
 .skill-card__description {
-  color: #9299a6;
+  color: #aeb6c3;
   font-size: 14px;
   line-height: 1.7;
 }
@@ -144,10 +144,10 @@
   min-width: 0;
   padding: 13px 14px;
 
-  border: 1px solid rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.105);
   border-radius: 13px;
 
-  background: rgba(255, 255, 255, 0.025);
+  background: rgba(255, 255, 255, 0.045);
 
   transition:
     transform 0.2s ease,
@@ -186,7 +186,7 @@
 }
 
 .skill-card__detail {
-  color: #8f96a3;
+  color: #a1aab8;
   font-size: 12px;
   line-height: 1.5;
 }
