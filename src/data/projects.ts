@@ -32,7 +32,6 @@ export const projects: Project[] = [
       "React",
       "TypeScript",
       "Zustand",
-      "Tailwind CSS",
       "Java 21",
       "Spring Boot",
       "Spring Security",
