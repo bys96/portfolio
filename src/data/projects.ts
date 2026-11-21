@@ -18,7 +18,7 @@ export const projects: Project[] = [
     category: "Personal Project",
     description:
       "멀티셀러 환경에서 주문부터 결제, 배송, 취소·반품 및 정산까지 전체 거래 흐름을 구현한 커머스 서비스입니다.",
-    period: "2026.07 — 진행 중",
+    period: "2026.07 — 2026.11",
     team: "1명",
     role: "Full Stack",
     features: [
@@ -34,10 +34,8 @@ export const projects: Project[] = [
       "Zustand",
       "Java 21",
       "Spring Boot",
-      "Spring Security",
       "Spring Data JPA",
       "MySQL",
-      "Toss Payments",
       "AWS S3",
       "Docker",
     ],
